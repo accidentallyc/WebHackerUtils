@@ -1,8 +1,9 @@
-window['Ω'] = function(selector){
+window['Ω'] = (selector) => {
   if(!jQuery){
     throw new Error('jQuery is required!')
   }
-  return new Ω.CommandQueue(selector)
+
+  return Ω.CommandQueue.factory(selector)
 }
 
 Ω.noop = ()=>{}

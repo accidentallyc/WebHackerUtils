@@ -6,7 +6,7 @@
 
     const interval = setInterval(() => {
       currMs += stepMs;
-      return Promise
+      Promise
         .resolve(conditionFn())
         .then((result, error) => {
           if(result !== null && result !== undefined && result !== false){
@@ -21,7 +21,7 @@
         })
     }, stepMs);
 
-    
+
   });
 }
 
